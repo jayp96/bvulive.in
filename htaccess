@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^bvulive.in$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.bvulive.in$
+RewriteCond %{REQUEST_URI} !events/
+RewriteRule (.*) /events/$1 [L]
